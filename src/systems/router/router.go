@@ -27,6 +27,7 @@ func (r *Router) Init() {
 			Handler(route.HandlerFunc)
 	}
 	// here we are getting our subroutes and then looping through them to attach them all to our main router
+	// since these are maps we are looping through we are grabbing the name which turns into the path our subroutes begin with example /cubs
 	v1SubRoutes := V1SubRoutes.GetRoutes()
 	for name, pack := range v1SubRoutes {
 		r.AttachSubRouterWithMiddleware(name, pack.Routes, pack.Middleware)

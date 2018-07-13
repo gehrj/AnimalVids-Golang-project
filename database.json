@@ -1,0 +1,10 @@
+{
+    "dev": {
+      "host": "localhost",
+      "user": "test",
+      "password" : "test",
+      "database": "animal_vids",
+      "driver": "mysql",
+      "multipleStatements": true
+    }
+  }
